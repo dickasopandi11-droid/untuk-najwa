@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #fff7fa;
+    color: #4a3b40;
+    overflow-x: hidden;
+}
+
+/* ===== PEMBUKA ===== */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    background: linear-gradient(
+        135deg,
+        #fff7fa,
+        #ffeef4,
+        #fffafd
+    );
+}
+
+.letter-box {
+    width: 100%;
+    max-width: 430px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 35px 28px;
+    border-radius: 25px;
+    box-shadow: 0 15px 45px rgba(180, 110, 135, 0.15);
+    text-align: center;
+    border: 1px solid #f8dce6;
+}
+
+.small-text {
+    font-size: 13px;
+    color: #a77b89;
+    margin-bottom: 15px;
+}
+
+.letter-box h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 35px;
+    margin-bottom: 18px;
+    color: #704957;
+}
+
+.letter-box p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #6d5960;
+}
+
+.open-btn {
+    margin-top: 25px;
+    padding: 13px 25px;
+    border: none;
+    border-radius: 30px;
+    background: #d98da6;
+    color: white;
+    font-family: inherit;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.open-btn:hover {
+    transform: translateY(-3px);
+    background: #c97d96;
+}
+
+/* ===== ISI ===== */
+
+.content {
+    padding: 70px 20px;
+    max-width: 500px;
+    margin: auto;
+}
+
+.section-title {
+    text-align: center;
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+    color: #704957;
+    margin-bottom: 40px;
+}
+
+.message {
+    background: white;
+    padding: 25px;
+    border-radius: 22px;
+    line-height: 1.9;
+    font-size: 14px;
+    box-shadow: 0 10px 35px rgba(180, 110, 135, 0.1);
+    margin-bottom: 45px;
+}
+
+/* ===== FOTO ===== */
+
+.photo-card {
+    margin-bottom: 35px;
+    overflow: hidden;
+    border-radius: 22px;
+    box-shadow: 0 12px 35px rgba(100, 70, 80, 0.15);
+}
+
+.photo-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+}
+
+.photo-card:hover img {
+    transform: scale(1.03);
+}
+
+/* ===== ANIMASI ===== */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== TOMBOL MUSIK ===== */
+
+.music-btn {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    background: #d98da6;
+    color: white;
+    font-size: 17px;
+    box-shadow: 0 8px 25px rgba(180, 110, 135, 0.3);
+    z-index: 100;
+}
+
+/* ===== HEART ===== */
+
+.floating-heart {
+    position: fixed;
+    pointer-events: none;
+    font-size: 22px;
+    color: #d98da6;
+    animation: heartFloat 1.2s ease-out forwards;
+    z-index: 999;
+}
+
+@keyframes heartFloat {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-80px) scale(1.5);
+    }
+}
+
+/* ===== FOOTER ===== */
+
+.footer {
+    text-align: center;
+    padding: 50px 20px 80px;
+    color: #a77b89;
+    font-size: 13px;
+}
+
+@media (max-width: 380px) {
+    .letter-box h1 {
+        font-size: 30px;
+    }
+
+    .content {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
